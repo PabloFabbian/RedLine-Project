@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Red Line Project | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-0ys/..../OAYZacIgyiv+8qejcNRHJNSG+nOFOkEFdQ=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="imgs/Redline.ico">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3">
+                <div class="logo">
+                    <a class="navbar-brand" href="#"><img class ="R" src="imgs/Redline.ico" sizes="15*15" alt="Logo"></a>
+                    <span class="hidden">ed Line</span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-0">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="#"  id="formulario">Servicio de armado de PC's</a>
+                        </li>                    
+                        <li class="nav-item dropdown mx-1">
+                            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Venta de componentes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Mouse</a>
+                                <a class="dropdown-item" href="#">Teclado</a>
+                                <a class="dropdown-item" href="#">Cámara</a>
+                                <a class="dropdown-item" href="#">Altavoces</a>
+                                <a class="dropdown-item" href="#">Auriculares</a>
+                                <a class="dropdown-item" href="#">Microfono</a>
+                                <a class="dropdown-item" href="#">Mousepad</a>
+                                <a class="dropdown-item" href="#">Pantallas</a>
+                            </div>
+                        </li>      
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>            
+
+<!--Banner ----------------------->
+            <div class="jumbotron jumbotron-fluid" style="background-color: #333; color: #fff; height: 35%;">
+                <div class="container">
+                    <h1 class="display-3">Red<span>-</span>Line <span>Project</span></h1>
+                    <h2 class="display-5">Servicio Técnico y Armado de Computadoras</h2>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-8">
+
+<!--Descripción ------------------>
+                        <div class="descripcion">
+                            <br>
+                            <h2>¿Quiénes somos?</h2>
+                            <p>Somos una pequeña compañía que se dedica al armado de computadoras para uso diario. Día a día lidiamos con diferentes problemáticas resueltas al poco tiempo. Es el conocimiento adquirido sobre el ámbito lo que nos motivó a buscar esa forma de aportar nuestro granito de arena a esta comunidad en constante crecimiento. ¿Qué habilidades logramos desarrollar? Bueno...</p>
+                        </div>
+
+<!--Services Cards --------------->
+                        <button id="show-cards" class="boton">¡Presione aquí!</button>
+                        <div class="card-wrapper" id="card-structure">
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="imgs/mother.jpg" alt="Imagen 1">
+                                    <h3>Armado de PC's <span><br>personalizado</span></h3>
+                                    <p>De acuerdo las preferencias de c/u y el presupuesto del cual disponga.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="imgs/notebook.jpg" alt="Imagen 2">
+                                    <h3>Reparación de Notebooks<span><br> y PC's</span></h3>
+                                    <p>Esa compañera que nos acompaña a todos lados ¡Vamos a revivirla!</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="imgs/programas.jpg" alt="Imagen 3">
+                                    <h3>Programas como <span><br>herramientas de trabajo</span></h3>
+                                    <p>Potencia tu PC con esos programas imprescindibles, instalados de forma rápida y segura.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-content">
+                                    <img src="imgs/pc.jpg" alt="Imagen 4">
+                                    <h3>Atención Express y<span><br>Presupuestado al día</span></h3>
+                                    <p>Combinamos calidad y rapidez y garantizamos la satisfacción de tus proyectos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+<!--Contacto Forms --------------->
+                    <div class="col-md-4" id="contacto">
+                        <div class="contacto">
+                            <h2>Servicio de armado de PC's</h2>
+                            <p>Contáctanos para más información sobre nuestro servicio de armado de PC's personalizados. Te asesoramos financieramente con el fin de conseguir la mejor calidad al menor precio.</p>
+                            <form>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mensaje">Mensaje:</label>
+                                    <textarea id="mensaje" name="mensaje" class="form-control"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <br><br>
+
+<!--Tienda title ----------------->
+                    <div class="clearfix"></div>
+                    <div class="col-md-12">
+                        <div id="shop-title">
+                            <br><hr class="line"><br>
+                            <h1>Tienda</h1>
+                            <h2>Perifericos y Pantallas. -</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+<!--Ofertas del día -------------->
+        <div class="container offers">
+            <br>
+            <h2>¡Super ofertas del día!</h2>
+            <p>[ No acumulables ]</p>
+            <div class="ofertas">
+                <ul>
+                    <li class="oferta" data-id="1">
+                        <span class="nombre-oferta">Oferta 1</span>
+                        <span class="descripcion-oferta"> - 15% de descuento con tarjetas  <i class="fab fa-cc-visa fa-lg" alt="Visa"></i> <i class="fab fa-cc-mastercard fa-lg" alt="Mastercard"> </i> </span>
+                        <button class="btn btn-primary OfertaBtn">Aplicar</button>
+                    </li>
+                    <li class="oferta" data-id="2">
+                        <span class="nombre-oferta">Oferta 2</span>
+                        <span> - Envío gratis (CABA) </span>  
+                        <button class="btn btn-primary OfertaBtn">Aplicar</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+<!--Productos --------------------->
+        <div id="product-container">
+            
+        </div>
+
+<!--Cookies-->
+        <div class="cookie-banner">
+            <div class="cookie-banner-content">
+                <p>Usamos cookies para asegurarnos de brindarte la mejor experiencia en nuestro sitio web. Al hacer clic en "¡Estoy de acuerdo!" aceptas todas las cookies. <a href="#">Configuración de cookies</a></p>
+                <div class="cookie-banner-buttons">
+                    <button id="cookie-banner-accept">¡Estoy de acuerdo!</button>
+                    <button id="cookie-banner-settings" href="#">Configuración de cookies</button>
+                </div>
+                <button class="cookie-banner-close" aria-label="Cerrar">×</button>
+            </div>
+        </div>
+
+<!--Socials Icons ----------------->
+        <section>
+            <br>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <br>
+        </section>
+
+<!--Whatsapp Icon ------------------>
+        <div class="float-whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=5491168529993" target="_blank">
+                <img src="imgs/Whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+
+<!--Carrito Icon ------------------->
+        <div class="float-carrito mx-2">
+            <i class="nav-link" id="cart-button">
+                <img src="imgs/carrito.png" alt="Cart">
+                <span id="carrito-count">0</span>
+            </i>
+        </div>
+
+<!--Carrito visualizer -------------->
+        <div id="cart-visualizer" class="cart">
+            <h3>Carrito de compras</h3>
+            <ul>
+                <p>Productos: <span id="product-list"></span></p>
+            </ul>
+            <ul>
+                <p>Ofertas: <span id="ofertas"></span> <span id="descuento-ofertas"></span></p>
+            </ul>
+            <ul>
+                <p>Total: $<span id="total-carrito"></span></p>
+            </ul>
+            <ul>
+                <button id="CheckOutBtn">Comprar</button>
+            </ul>
+        </div>
+
+        <!--Copyright --------------->
+        <footer class="cardf text-center">
+            <div class="card-header">
+                Nuestras Redes Sociales
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Red Line Project</h5>
+                <p class="card-text">¡No dejes que la vida de tu computadora quede en la LINEA ROJA!</p>
+                <button type="button" class="btn btn-outline-primary">Contactate con nosotros!</button>
+            </div>
+            <div class="card-footer">
+                <div class="copyright">© 2023 Red Line Project. Todos los derechos reservados.</div>
+                <div class="links">
+                    <a href="#">Términos</a>
+                    <a href="#">Aviso de privacidad</a>
+                    <a href="#">Accesibilidad</a>
+                    <a href="#">Preferencias</a>
+                </div>
+            </div>
+        </footer>
+
+        <script script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+        <script src="https://kit.fontawesome.com/5ed52fce3f.js" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="js/stock.js"></script>
+        <script src="js/home.js"></script>
+        <script src="js/cart.js"></script>
+    </body>
+</html>

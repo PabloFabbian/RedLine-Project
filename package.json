@@ -1,0 +1,14 @@
+{
+  "name": "b.-proyecto-final---pablo-e.-fabbian",
+  "version": "1.0.0",
+  "description": "Proyecto Final para el curso de Coderhouse en Javascript",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^11.4.8"
+  }
+}
