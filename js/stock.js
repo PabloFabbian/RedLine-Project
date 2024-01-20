@@ -1,4 +1,3 @@
-
 // Productos ----------------------------------------------------------------------------------------
 const products = [
     {id:11, name: 'Mouse Logitech G Series Lightsync G203', price: '4099', imageSrc: 'imgs/Productos/Mouse/Lightsync G203.jpeg', cantidad: 0},
@@ -43,5 +42,24 @@ const products = [
 ];
 
 //Local Storage
-localStorage.setItem('productos', JSON.stringify(products));
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+function addToCart(product) {
+    cart.push(product);
+    updateCart();
+}
+
+function updateCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+}
+
+function saveCartOnClose() {
+    // Guarda el carrito de compras en el local storage antes de cerrar el navegador
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+const exampleProduct = { id: 11, name: 'Ejemplo', price: '100', cantidad: 1 };
+addToCart(exampleProduct);
+
+window.addEventListener('beforeunload', saveCartOnClose);

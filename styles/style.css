@@ -1,3 +1,7 @@
+html{
+    zoom: 80%;
+}
+
 /*------------------Grids-----------------*/
 .row {
     display: flex;
@@ -136,8 +140,8 @@ body {
 
 /*-------------- Banner --------------*/
 .jumbotron {
-    margin-top: 4.1%;
-    background-image: url(../imgs/cubo.jpg);
+    margin-top: 6.2%;
+    background-image: url(../imgs/cubo1.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment:initial;
@@ -148,7 +152,7 @@ body {
 }
 .jumbotron .container {
     text-align: center;
-    height: 27vh;
+    height: 33vh;
     margin-top: 2.5%;
 }
 .display-3 {
@@ -406,7 +410,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 12%;
     background-color: #25345e;
     border-top: 1px solid #e6e6e6;
     display: flex;

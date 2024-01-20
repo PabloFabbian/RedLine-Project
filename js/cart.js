@@ -1,4 +1,4 @@
-let carrito = []
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Añadir productos al carrito
 const productos = document.getElementsByClassName('product')
@@ -54,7 +54,13 @@ function actualizarCarritoVisualizer() {
 
     const carritoCount = document.getElementById('carrito-count');
     carritoCount.textContent = carrito.length;
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 }
+
+actualizarCarritoVisualizer()
 
 // Oferta en carrito ---------------------------------------------------------------------------------------------------
 const botonesAplicar = document.querySelectorAll('.oferta button')
