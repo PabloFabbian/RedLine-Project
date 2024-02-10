@@ -85,29 +85,76 @@ window.addEventListener('scroll', () => {
 });
 
 // Cookies ----------------------------------------------------------------------------------------------
-const cookieBanner = document.querySelector('.cookie-banner');
-const cookieBannerAccept = document.querySelector('#cookie-banner-accept');
-const cookieBannerSettings = document.querySelector('#cookie-banner-settings');
-const cookieBannerClose = document.querySelector('.cookie-banner-close');
+document.addEventListener('DOMContentLoaded', () => {
+  const cookiesAccepted = localStorage.getItem('cookiesAccepted') === 'true';
 
-const cookiesAccepted = localStorage.getItem('cookiesAccepted') === 'true';
+  if (!cookiesAccepted) {
+    window.onload = () => {
+      setTimeout(() => {
+        const cookiesAccepted = localStorage.getItem('cookiesAccepted') === 'true';
+        if (!cookiesAccepted) {
+          generateCookieBanner();
+        }
+      }, 5000);
+    };
+  }
+  function generateCookieBanner() {
+    const cookieBanner = document.createElement('div');
+    cookieBanner.className = 'cookie-banner';
 
-if (!cookiesAccepted) {
-  cookieBanner.style.display = 'block';
-}
+    const cookieBannerContent = document.createElement('div');
+    cookieBannerContent.className = 'cookie-banner-content';
 
-cookieBannerAccept.addEventListener('click', () => {
-  hideCookieBanner();
-  localStorage.setItem('cookiesAccepted', 'true');
+    const paragraph = document.createElement('p');
+    paragraph.textContent = 'Usamos cookies para asegurarnos de brindarte la mejor experiencia en nuestro sitio web. Al hacer clic en "¡Estoy de acuerdo!" aceptas todas las cookies. ';
+
+    const cookieSettingsLink = document.createElement('a');
+    cookieSettingsLink.href = '#';
+    cookieSettingsLink.textContent = 'Configuración de cookies';
+    paragraph.appendChild(cookieSettingsLink);
+
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'cookie-banner-buttons';
+
+    const acceptButton = document.createElement('button');
+    acceptButton.id = 'cookie-banner-accept';
+    acceptButton.textContent = '¡Estoy de acuerdo!';
+
+    const settingsButton = document.createElement('button');
+    settingsButton.id = 'cookie-banner-settings';
+    settingsButton.href = '#';
+    settingsButton.textContent = 'Configuración de cookies';
+
+    const closeButton = document.createElement('button');
+    closeButton.className = 'cookie-banner-close';
+    closeButton.setAttribute('aria-label', 'Cerrar');
+    closeButton.textContent = '×';
+
+    buttonsContainer.appendChild(acceptButton);
+    buttonsContainer.appendChild(settingsButton);
+
+    cookieBannerContent.appendChild(paragraph);
+    cookieBannerContent.appendChild(buttonsContainer);
+    cookieBannerContent.appendChild(closeButton);
+    cookieBanner.appendChild(cookieBannerContent);
+
+    document.body.appendChild(cookieBanner);
+
+    acceptButton.addEventListener('click', () => {
+      hideCookieBanner();
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
+
+    settingsButton.addEventListener('click', () => {
+      // Agregar lógica para manejar la configuración de cookies si es necesario
+    });
+
+    closeButton.addEventListener('click', () => {
+      hideCookieBanner();
+    });
+
+    function hideCookieBanner() {
+      cookieBanner.style.display = 'none';
+    }
+  }
 });
-
-cookieBannerSettings.addEventListener('click', () => {
-});
-
-cookieBannerClose.addEventListener('click', () => {
-  hideCookieBanner();
-});
-
-function hideCookieBanner() {
-  cookieBanner.style.display = 'none';
-}
