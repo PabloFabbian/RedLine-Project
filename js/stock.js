@@ -38,7 +38,7 @@ const products = [
     {id:81, name: 'Pantalla LED 24" EVL Full HD 24 EVLB', price: '453990', imageSrc: 'imgs/Productos/Pantalla/evl.jpeg', cantidad: 0},
     {id:82, name: 'Pantalla LPS 29" LG Ultrawide Freesync', price: '73299', imageSrc: 'imgs/Productos/Pantalla/ultrawide.jpeg', cantidad: 0},
     {id:83, name: 'Pantalla LED Samsung 24" F24T35 EVLB', price: '69990', imageSrc: 'imgs/Productos/Pantalla/samsung.jpeg', cantidad: 0},
-    {id:84, name: 'Pantalla Acer 21.5 Full Hd - Hdmi Vga 4ms Tn', price: '54729', offerPrice: '$72.150', imageSrc: 'imgs/Productos/Pantalla/acer.jpeg', cantidad: 0}
+    {id:84, name: 'Pantalla Acer 21.5 Full Hd - Hdmi Vga 4ms Tn', price: '54729', offerPrice: '$72.150', imageSrc: 'imgs/Productos/Pantalla/acer.png', cantidad: 0}
 ];
 
 //Local Storage
