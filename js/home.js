@@ -105,33 +105,36 @@ formulario.addEventListener('click', function(event) {
     });
 });
 
-// Shop Products ---------------------------------------------------------------------------------------
-function generateProductHTML(product) {
-    const productoHTML = `
-        <div class="product" id="articulo">
-            <img src="${product.imageSrc}" alt="${product.name}">
-            <p class="name">${product.name}</p>
-            <p class="price">$${product.price}</p>
-            ${product.offerPrice ? `<p class="offer">${product.offerPrice}</p>` : ''}
+// Genera el HTML para cada producto individual
+function generateProductHTML({ imageSrc, name, price, offerPrice }) {
+    return `
+        <div class="product-card">
+            <img src="${imageSrc}" alt="${name}" class="product-image">
+            <div class="product-info">
+                <p class="product-name">${name}</p>
+                <div class="product-pricing">
+                    <p class="product-price">$${price}</p>
+                    ${offerPrice ? `<p class="product-offer">$${offerPrice}</p>` : ''}
+                </div>
+            </div>
         </div>
     `;
-    return productoHTML;
 }
 
+// Renderiza los productos en el contenedor, organizados en filas de 4
 function renderProducts(products) {
     const productContainer = document.getElementById('product-container');
-    let productHTML = '';
-    for (let i = 0; i < products.length; i++) {
-        const product = products[i];
-        if (i % 4 === 0) {
-            productHTML += '<div class="row">';
-        }
-        productHTML += generateProductHTML(product);
-        if (i % 4 === 3 || i === products.length - 1) {
-            productHTML += '</div>';
-        }
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < products.length; i += 4) {
+        const row = document.createElement('div');
+        row.className = 'product-row';
+
+        row.innerHTML = products.slice(i, i + 4).map(generateProductHTML).join('');
+        fragment.appendChild(row);
     }
-    productContainer.innerHTML = productHTML;
+
+    productContainer.appendChild(fragment);
 }
 
 renderProducts(products);
