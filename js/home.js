@@ -105,16 +105,20 @@ formulario.addEventListener('click', function(event) {
     });
 });
 
-// Genera el HTML para cada producto individual
-function generateProductHTML({ imageSrc, name, price, offerPrice }) {
+function generateProductHTML({ id, imageSrc, name, price, offerPrice }) {
     return `
-        <div class="product-card">
+        <div class="product-card" data-id="${id}">
+            ${offerPrice ? '<span class="product-tag">Oferta</span>' : ''}
             <img src="${imageSrc}" alt="${name}" class="product-image">
             <div class="product-info">
                 <p class="product-name">${name}</p>
                 <div class="product-pricing">
-                    <p class="product-price">$${price}</p>
+                    <p class="product-price ${offerPrice ? 'strikethrough' : ''}">$${price}</p>
                     ${offerPrice ? `<p class="product-offer">$${offerPrice}</p>` : ''}
+                </div>
+                <div class="button-container">
+                    <button class="view-detail-button" onclick="viewProductDetail(${id})">Ver detalle</button>
+                    <button class="add-to-cart-button" onclick="addToCart({id: '${id}', name: '${name}', price: ${price}, imageSrc: '${imageSrc}', cantidad: 1})">Agregar al carrito</button>
                 </div>
             </div>
         </div>
