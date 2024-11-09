@@ -15,6 +15,8 @@
 
     <body>
         <header>
+
+<!--Navbar ----------------------->
             <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3">
                 <a class="logo" href="/">
                     <div class="navbar-brand">
@@ -28,13 +30,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item mx-0">
-                            <a class="nav-link text-light" href="#">Inicio</a>
+                            <a class="nav-link text-light fs-5" href="#">Inicio</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link text-light" href="#"  id="formulario">Servicio de armado de PC's</a>
+                            <a class="nav-link text-light fs-5" href="#"  id="formulario">Servicio de armado de PC's</a>
                         </li>                    
                         <li class="nav-item dropdown mx-1">
-                            <a class="btn btn-primary dropdown-toggle text-light" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="btn btn-primary dropdown-toggle text-light fs-5" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Venta de componentes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -62,100 +64,74 @@
             </nav>            
 
 <!--Banner ----------------------->
-            <div class="jumbotron jumbotron-fluid" style="background-color: #333; color: #fff; height: 35%;">
+            <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-3">Red<span>-</span>Line <span>Project</span></h1>
+                    <h1 class="display-3">
+                        Red<span class="highlight">-</span>Line <span class="highlight">Project</span>
+                    </h1>
                     <h2 class="display-5">Servicio Técnico y Armado de Computadoras</h2>
                 </div>
             </div>
         </header>
 
+<!--Descripción ------------------>
         <main>
             <div class="container mt-5">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="description">
+                        <br>
+                        <h2>¿Quiénes somos?</h2>
+                        <p>Somos una pequeña compañía que se dedica al armado de computadoras para uso diario. Día a día lidiamos con diferentes problemáticas resueltas al poco tiempo. Es el conocimiento adquirido sobre el ámbito lo que nos motivó a buscar esa forma de aportar nuestro granito de arena a esta comunidad en constante crecimiento. ¿Qué habilidades logramos desarrollar? Bueno...</p>
+                    </div>
 
-<!--Descripción ------------------>
-                        <div class="descripcion">
-                            <br>
-                            <h2>¿Quiénes somos?</h2>
-                            <p>Somos una pequeña compañía que se dedica al armado de computadoras para uso diario. Día a día lidiamos con diferentes problemáticas resueltas al poco tiempo. Es el conocimiento adquirido sobre el ámbito lo que nos motivó a buscar esa forma de aportar nuestro granito de arena a esta comunidad en constante crecimiento. ¿Qué habilidades logramos desarrollar? Bueno...</p>
+<!-- Services Cards ------------------>
+                    <div class="service-card-wrapper" id="card-structure">
+                        <div class="service-card">
+                            <div class="service-card-content">
+                                <img src="imgs/programas.webp" alt="Imagen 3">
+                                <h3>Programas como <span><br>herramientas de trabajo</span></h3>
+                                <p>Potencia tu PC con programas imprescindibles, instalados de forma rápida y segura.</p>
+                            </div>
                         </div>
-
-<!--Services Cards --------------->
-                        <div class="card-wrapper" id="card-structure">
-                            <div class="card">
-                                <div class="card-content">
-                                    <img src="imgs/mother.webp" alt="Imagen 1">
-                                    <h3>Armado de PC's <span><br>personalizado</span></h3>
-                                    <p>De acuerdo las preferencias de c/u y el presupuesto del cual disponga.</p>
-                                </div>
+                        <div class="service-card">
+                            <div class="service-card-content">
+                                <img src="imgs/pc.webp" alt="Imagen 4">
+                                <h3>Atención Express y <span><br>Presupuestado al día</span></h3>
+                                <p>Combinamos calidad y rapidez, garantizando la satisfacción de tus proyectos.</p>
                             </div>
-                            <div class="card">
-                                <div class="card-content">
-                                    <img src="imgs/notebook.webp" alt="Imagen 2">
-                                    <h3>Reparación de Notebooks<span><br> y PC's</span></h3>
-                                    <p>Esa compañera que nos acompaña a todos lados ¡Vamos a revivirla!</p>
-                                </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-content">
+                                <img src="imgs/notebook.webp" alt="Imagen 2">
+                                <h3>Reparación de Notebooks <span><br>y PC's</span></h3>
+                                <p>¡Revive tu compañera que te acompaña a todos lados!</p>
                             </div>
-                            <div class="card">
-                                <div class="card-content">
-                                    <img src="imgs/programas.webp" alt="Imagen 3">
-                                    <h3>Programas como <span><br>herramientas de trabajo</span></h3>
-                                    <p>Potencia tu PC con esos programas imprescindibles, instalados de forma rápida y segura.</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-content">
-                                    <img src="imgs/pc.webp" alt="Imagen 4">
-                                    <h3>Atención Express y<span><br>Presupuestado al día</span></h3>
-                                    <p>Combinamos calidad y rapidez y garantizamos la satisfacción de tus proyectos.</p>
-                                </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card-content">
+                                <img src="imgs/mother.webp" alt="Imagen 1">
+                                <h3>Armado de PC's <span><br>personalizado</span></h3>
+                                <p>De acuerdo a las preferencias de cada uno y el presupuesto disponible.</p>
                             </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>
 
-<!--Contacto Forms --------------->
-                    <div class="col-md-4" id="contacto">
-                        <div class="contacto">
-                            <h2>Servicio de armado de PC's</h2>
-                            <p>Contáctanos para más información sobre nuestro servicio de armado de PC's personalizados. Te asesoramos financieramente con el fin de conseguir la mejor calidad al menor precio.</p>
-                            <form>
-                                <div class="form-group">
-                                    <label for="nombre">Nombre:</label>
-                                    <input type="text" id="nombre" name="nombre" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" id="email" name="email" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mensaje">Mensaje:</label>
-                                    <textarea id="mensaje" name="mensaje" class="form-control"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                            </form>
-                        </div>
-                    </div>
-                    <br><br>
-
 <!--Tienda title ----------------->
-                    <div class="clearfix"></div>
-                    <div class="col-md-12">
+                    <div class="Title col-md-12">
                         <div id="shop-title">
                             <br><hr class="line"><br>
-                            <h1>Tienda</h1>
-                            <h2>Perifericos y Pantallas. -</h2>
-                        </div>
+                            <h1>Computación de Vanguardia</h1>
+                            <h2>Equipos, Periféricos y Pantallas con Precios Incomparables</h2>
+                        </div>                        
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- Ofertas del día -->
+<!-- Ofertas del día -->
         <div class="container offers">
-            <h2>¡Super ofertas del día!</h2>
+            <h2>¡Super Ofertas del Día!</h2>
             <p class="offers-note">[ No acumulables ]</p>
             <div class="ofertas">
                 <ul>
@@ -179,15 +155,40 @@
                     </li>
                 </ul>
             </div>
-</div>
-
-<!--Productos --------------------->
-        <div id="product-container">
-            
         </div>
 
-<!--Cookies-->
+<!-- Productos -->
+        <div id="product-container"></div>
 
+<!-- Contact Form -->
+        <div class="contacto">
+            <div class="contacto-formulario">
+                <h2>Servicio de armado de PC's</h2>
+                <p>Contactanos para más información sobre nuestro servicio de armado de PC's personalizados. Te asesoramos financieramente para conseguir la mejor calidad al menor precio.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribe tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+            <div class="contacto-imagen">
+                <video class="video" autoplay muted loop>
+                    <source src="./imgs/PC Build.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>                               
+        </div>
 
 <!--Socials Icons ----------------->
         <section>
@@ -200,6 +201,9 @@
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
                 <a href="https://www.instagram.com/redline.ar/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footer-header">
+                - Nuestras Redes Sociales -
             </div>
             <br>
         </section>
@@ -233,19 +237,17 @@
             <button id="CheckOutBtn">Comprar</button>
         </div>
 
-<!--Copyright ----------------------->
-        <footer class="cardf text-center">
-            <div class="card-header">
-                Nuestras Redes Sociales
+<!-- Copyright -----------------------> 
+        <footer class="footer text-center">
+            <div class="footer-body">
+                <h5 class="footer-title">Red<span class="highlight">-</span>Line <span class="highlight">Project</span></h5>
+                <p class="footer-text">¡No dejes que la vida de tu computadora quede en la LINEA ROJA!</p>
+                <button type="button" class="btn btn-contact">Contactate con nosotros!</button>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Red Line Project</h5>
-                <p class="card-text">¡No dejes que la vida de tu computadora quede en la LINEA ROJA!</p>
-                <button type="button" class="btn btn-outline-primary">Contactate con nosotros!</button>
-            </div>
-            <div class="card-footer">
+            <div class="footer-bottom">
+                <hr />
                 <div class="copyright">© 2023 Red Line Project. Todos los derechos reservados.</div>
-                <div class="links">
+                <div class="footer-links">
                     <a href="#">Términos</a>
                     <a href="#">Aviso de privacidad</a>
                     <a href="#">Accesibilidad</a>
